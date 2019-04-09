@@ -15,3 +15,6 @@ CREATE TABLE pppCruisePoints (
   itemId INT REFERENCES specialItem(id),
   CustKey INT NOT NULL REFERENCES tarCustomer(id)
   );
+
+ALTER TABLE tarCustomer
+ALTER COLUMN eligible TYPE VARCHAR(20);

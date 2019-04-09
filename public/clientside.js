@@ -49,14 +49,10 @@ function addClient(fields) {
 		url: "/addClient", 
 		type: "POST",
 		data: ({name:name, eligible:eligible}),
-		// dataType: 'json',
-		// success: function() {
-		// 	console.log("Adding client...");
-		// }
-		// complete: function (data) {
-		 
-  //    	}
-	});
+	}).then(
+    function success() {
+        getCustomers();
+    };
 
-	getCustomers();
+	
 }
