@@ -52,7 +52,7 @@ function addClient(fields) {
 	}).then(
     function success() {
         getCustomers();
-    };
+    });
 
 	
 }
