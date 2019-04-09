@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Materialize/CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Javascript file -->
+     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+     <script src="clientside.js"></script>
+   
+    
+    <title>Cruise Points</title>
+</head>
+<body>
+    <h1>Cruise Points:</h1>
+
+    <body onload="getCustomers()">
+
+    <div>
+        <h2>Clients:</h2>
+        <ul id="ulCustomers">
+        </ul>
+    </div>
+
+    <h1>Add/Delete Points for a Client:</h1>
+
+    <form action="" method="post">
+        <input type="text" name="custname" id="custname" placeholder="Enter Client's Name:" >
+        <input type="text" name="custpoints" id="custpoints" placeholder="Enter Client's Points:" >
+
+        <input type="button" value="Submit" id="submit" name="submit" onclick="alterPoints(this); getCustomers();">
+
+    <h1>Add a New Client:</h1>    
+
+    </form>
+
+    <form action="" method="post">
+        <input type="text" name="name" id="name" placeholder="Enter New Client's Name:" >
+
+        <p><label><input name="eligible" id="ineligible" type="radio" value="ineligible" /><span>Ineligible</span></label></p>
+        <p><label><input name="eligible" id="eligible" type="radio" value="eligible" /><span>Eligible</span></label></p>
+
+        <input type="button" value="Submit" id="submit" name="submit" onclick="addClient(this)">
+
+    </form>
+
+</body>
+</html>

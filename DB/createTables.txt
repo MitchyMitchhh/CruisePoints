@@ -1,0 +1,17 @@
+CREATE TABLE tarCustomer(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(100),
+  eligible BIT default '0'
+  );
+
+CREATE TABLE specialItem(
+  id SERIAL PRIMARY KEY NOT NULL,
+  special BIT default '0'
+  );
+
+CREATE TABLE pppCruisePoints (
+  id SERIAL PRIMARY KEY NOT NULL,
+  points INT,
+  itemId INT REFERENCES specialItem(id),
+  CustKey INT NOT NULL REFERENCES tarCustomer(id)
+  );
