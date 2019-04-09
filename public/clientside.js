@@ -48,11 +48,11 @@ function addClient(fields) {
 	$.ajax({
 		url: "/addClient", 
 		type: "POST",
-		data: ({name:name, eligible:eligible}),
+		data: {name:name, eligible:eligible}
 	}).then(
     function success() {
         getCustomers();
     });
 
-	
+	getCustomers();
 }
