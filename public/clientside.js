@@ -26,11 +26,7 @@ function alterPoints(fields) {
 		}
 	});
 }
-
-
-
-
-
+//hey everyone
 
 function addClient(fields) {
 	var name = document.getElementById('name').value;
