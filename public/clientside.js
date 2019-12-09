@@ -27,6 +27,11 @@ function alterPoints(fields) {
 	});
 }
 
+
+
+
+
+
 function addClient(fields) {
 	var name = document.getElementById('name').value;
 	var eligible = document.getElementsByName('eligible');
